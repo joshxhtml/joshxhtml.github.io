@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  }
+  
+  .project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .project h2 {
+    font-size: 1.8em;
+    margin: 15px 0;
+  }
+  
+  .project p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    text-decoration: none;
+    color: #00ffff;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .project-link i {
+    margin-left: 10px;
+  }
+  
+  .project-link:hover {
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
+  hr {
+    border: 1px solid #00ffff;
+    margin: 20px 0;
+  }
+  
+  /* Glowing background effect */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.glitch.global/8cc54b43-298c-44bf-bfeb-c0232e9c5ccb/Sprite-0002.png?v=1708810118961') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  /* Ambient glowing effect */
+  body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,255,255,0.1), transparent 70%);
+    z-index: -1;
+    animation: ambientGlow 5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes ambientGlow {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+  
