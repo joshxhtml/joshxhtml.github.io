@@ -19,6 +19,11 @@
     text-align: center;
     backdrop-filter: blur(4px) brightness(0.3);
   }
+  .divider {
+    width: 80%;
+    border: 1px solid #bb86fc;
+    margin: 20px 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
