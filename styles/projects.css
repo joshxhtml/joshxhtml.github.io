@@ -203,4 +203,9 @@
         margin: 10px 5px;
     }
   }
-  
+  footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #777;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
