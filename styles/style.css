@@ -13,6 +13,11 @@
   display: flex;
   align-items: center;
 }
+.newcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .now-playing img {
   border-radius: 5px;
   margin-right: 15px;
@@ -185,3 +190,10 @@ footer {
       margin: 10px 5px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    background-color: rgba(0, 0, 0, 0.2); /* Increase transparency */
+  }
+}
+
