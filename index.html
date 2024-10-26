@@ -87,7 +87,7 @@
           </div>
         `;
       } else {
-        nowPlayingDiv.innerHTML = `<p>No song currently playing</p>`;
+        nowPlayingDiv.innerHTML = `<p>I'm not currently playing anything, <a href="https://open.spotify.com/playlist/5Xg7VGKGjjXBwwzoZDtR4d?si=nc6n3xmGRnWZkWLsT2WihQ&pi=u-MzazJak1RPmo"><i class="fab fa-spotify"></i>feel free to check out my playlist tho.</a></p>`;
       }
     } catch (error) {
       console.error('Error fetching now playing data:', error);
