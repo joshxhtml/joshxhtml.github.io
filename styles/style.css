@@ -320,14 +320,14 @@ body:hover {
   font-size: 1.5em;
 }
 
-/* Under Construction Overlay */
-.under-construction {
-  position: relative;
-  background-image: url('/images/under-construct.png'); 
-  background-size: cover;
-  background-position: center;
+/* Caution Tape Image Styles */
+.caution-tape {
+  width: 80%;
+  max-width: 150px; 
+  margin-bottom: 5px; 
 }
 
+/* Under Construction Overlay */
 .overlay {
   position: absolute;
   top: 0;
@@ -337,12 +337,12 @@ body:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 0, 0, 0.7); 
+  background-color: rgba(255, 0, 0, 0.7);
   color: white;
   font-weight: bold;
   font-size: 1.5em;
   opacity: 0.9;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 /* Footer */
