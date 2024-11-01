@@ -21,7 +21,37 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  overflow-y: auto; 
   backdrop-filter: blur(4px) brightness(0.3);
+}
+
+/* My Custom Scrollbar*/
+body::-webkit-scrollbar {
+  width: 8px; 
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent; 
+  border-radius: 4px; 
+  transition: background 0.3s;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.5); 
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.5) transparent; 
+}
+
+body:hover {
+  scrollbar-color: rgba(128, 128, 128, 0.5) rgba(128, 128, 128, 0.1); 
 }
 
 
