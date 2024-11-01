@@ -283,6 +283,40 @@ body:hover {
 .project-link:hover {
   text-shadow: 0 0 10px #bb86fc;
 }
+
+/* More Links */
+.more-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.more-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: rgba(46, 44, 44, 0.5);
+  color: #bb86fc;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.more-item:hover {
+  background-color: #bb86fc;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.more-item i {
+  font-size: 1.5em;
+}
+
 /* Footer */
 footer {
   padding: 20px;
