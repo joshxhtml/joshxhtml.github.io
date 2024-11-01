@@ -13,6 +13,7 @@ body {
   background-image: url('/images/background.png');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-color: #121212;
   color: #ffffff;
   display: flex;
