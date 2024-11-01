@@ -23,10 +23,6 @@ body {
   backdrop-filter: blur(4px) brightness(0.3);
 }
 
-@keyframes ambientGlow {
-  0% { opacity: 0.2; }
-  100% { opacity: 0.4; }
-}
 
 /* Containers */
 .container {
