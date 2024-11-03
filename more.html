@@ -17,7 +17,7 @@
                       <a href="https://github.com/i-suck-at-most-stuff" target="_blank"><i class="fab fa-github"></i></a>
                       <a href="https://i-suck-at-most-stuff.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
                       <a href="https://www.instagram.com/i_suck_at_most_stuff/" target="_blank"><i class="fab fa-instagram"></i></a>
-                      <a href="https://open.spotify.com/user/31gfbqbz2nxkljqdtcou6vx6lpbm?si=C3RFnEfaQKu2Cdv4ReA-6Q" target="_blank"><i class="fab fa-spotify"></i></a>
+                      <a href="https://codepen.io/i-suck-at-most-stuff" target="_blank"><i class="fab fa-codepen"></i></a>
                     <!-- Add this once i turn 16 <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>-->
                   </div>
               </div>
@@ -25,15 +25,15 @@
         <hr class="divider">
         
         <div class="more-links">
-            <a href="/manifesto.html" class="more-item under-construction">
+            <a href="/more/manofesto.html" class="more-item">
                 <i class="fas fa-file-alt"></i>
                 <span>My Manifesto</span>
             </a>
-            <a href="/vinyls.html" class="more-item">
+            <a href="/more/vinyl.html" class="more-item">
                 <i class="fas fa-record-vinyl"></i>
                 <span>Vinyl Collection</span>
             </a>
-            <a href="/blog.html" class="more-item under-construction">
+            <a href="#" class="more-item under-construction">
                 <i class="fas fa-rss"></i>
                 <span>Blog / RSS Feed</span>
             </a>
@@ -56,24 +56,6 @@
         <p>Made by Joshua Worthington | <a href="https://github.com/i-suck-at-most-stuff/i-suck-at-most-stuff.github.io" style="text-decoration: none; color: inherit">Proudly Open Source <i class="fab fa-github"></i></a></p>
     </footer>
     <br>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('.more-item');
-    
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();  // Prevent immediate navigation
-                    document.body.classList.remove('fade-in'); // Remove fade-in class
-                    document.body.style.opacity = 0; // Start fade-out effect
-    
-                    // After delay, navigate to the new page
-                    setTimeout(() => {
-                        window.location.href = this.href;
-                    }, 300); // Adjust delay to match CSS transition
-                });
-            });
-        });
-    </script>
     
 </body>
 </html>

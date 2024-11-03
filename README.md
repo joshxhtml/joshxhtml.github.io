@@ -1,40 +1,60 @@
-# Hello, I'm Josh :)
+# My Portfolio
 
-Welcome to my portfolio! I'm a passionate developer, student, and enthusiast in all things tech. I love creating projects that merge creativity and technology, and I'm always looking to learn new skills and collaborate with others.
+Welcome to my portfolio! Here, you'll find a showcase of my work, projects, and my journey as a developer. This repository contains my portfolio website, which highlights my skills, projects, and professional growth.
+
+## Table of Contents
+
+- [About Me](#about-me)
+- [Skills](#skills)
+- [Projects](#projects)
+- [License](#license)
+
+
+---
 
 ## About Me
 
-- Student at Beachside High School
-- Running a coding club called the [Beachside Barracoders](https://barracoders.com)
-- Member of [Hack Club International](https://hackclub.com)
-- Currently learning game development with Godot
-- Passionate about creating games, web development, and exploring new technologies
-  
+Hello! I'm a developer passionate about creating innovative projects and solving complex problems. I have experience in several programming languages and enjoy exploring new technologies, with a strong focus on front-end development and web-based applications.
+
+---
 
 ## Skills
 
-- **Languages**: JavaScript, HTML/CSS, Python, Swift
-- **Game Development**: Learning Godot
-- **Web Development**: React, Node.js,
-- **Tools & Platforms**: GitHub, Glitch.com, Replit, Itch.io
-- **Other**: UI Design, Project Management
+Here are some of the key technologies I work with:
 
+- **Languages**: HTML, CSS, JavaScript, Python
+- **Frameworks & Libraries**: React, Node.js, Express, Godot
+- **Tools**: Git, GitHub, Glitch, Clickteam, Unity, Unreal Engine
+
+---
 
 ## Projects
 
-Here are a few projects I've been working on:
+### 1. [Beachside Barracoders](https://barracoders.com/)
+**Description**: Vibrant school coding club where members collaborate on projects, learn coding languages, and participate in competitions.
 
-- **Barracoders Club Website** - The website for the club i run.
-- **My Portfolio** - Working on a interactive one, right now just a static on is running.
-- **Spotify Playlist Game** - A web game that challenges users to guess whether a displayed song is from their playlist.
-- **A Bunch of Random Meme Websites** - I work on stuff I feel like and when an idea pops into my head I make it.
+### 2. [Tripwire](https://teamtripwire.glitch.me)
+**Description**: An innovative tracker of local offenders in the state of Florida, The Winner of my School's Innovation Competition
 
-Check out more of my projects in the [repositories](https://github.com/i-suck-at-most-stuff?tab=repositories) section!
+### 3. [Undertale Sprig Edition](https://sprig.hackclub.com/gallery/undertale-sprig-edition)
+**Description**: Over the summer I made an Undertale Themed Game for Hack Clubs Sprig Console.
 
-## My Socials:
+---
 
-- [My Portfolio](https://i-suck-at-most-stuff.github.io)
-- [Tumblr](https://www.tumblr.com/isuckatmoststuff)
-- [Itch.io](https://i-suck-at-most-stuff.itch.io/)
+## License
+
+This portfolio is licensed under the MIT License. Feel free to fork, modify, and distribute as needed.
+
+---
+
+## Contact
+If you’d like to collaborate on a project or just want to say hello, feel free to reach out:
+
+**LinkedIn:** Not Yet
+**Itch.io:** [i-suck-at-most-stuff](https://i-suck-at-most-stuff.itch.io/)
+**Instagram:** [i-suck-at-most-stuff](https://www.instagram.com/i_suck_at_most_stuff/)
+
+Thank you for visiting my portfolio repository!
+
 
 

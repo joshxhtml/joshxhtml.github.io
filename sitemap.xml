@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -17,6 +16,19 @@
   <lastmod>2024-10-28T14:48:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
+<url>
+  <loc>https://joshworthington.barracoders.com/more</loc>
+  <lastmod>2024-10-28T14:48:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://joshworthington.barracoders.com/more/vinyl</loc>
+  <lastmod>2024-10-28T14:48:32+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://joshworthington.barracoders.com/more/manofesto</loc>
+  <lastmod>2024-10-28T14:48:32+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
 </urlset>

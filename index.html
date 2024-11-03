@@ -23,7 +23,7 @@
                     <a href="https://github.com/i-suck-at-most-stuff" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://i-suck-at-most-stuff.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
                     <a href="https://www.instagram.com/i_suck_at_most_stuff/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://open.spotify.com/user/31gfbqbz2nxkljqdtcou6vx6lpbm?si=C3RFnEfaQKu2Cdv4ReA-6Q" target="_blank"><i class="fab fa-spotify"></i></a>
+                    <a href="https://codepen.io/i-suck-at-most-stuff" target="_blank"><i class="fab fa-codepen"></i></a>
                   <!-- Add this once i turn 16 <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>-->
                 </div>
             </div>
@@ -33,7 +33,12 @@
 
         
         <div class="description">
-            <p>Hi, I&#39;m Josh! I know HTML, CSS, and JavaScript, and I'm currently learning Swift, Python, and Godot. I enjoy creating websites and developing short games. <br><br> One of my achievements is developing a <a href="https://teamtripwire.glitch.me" class="squiggly-link">local offender tracker called Tripwire</a>, which won a school competition. I also run the <a href="https://barracoders.com/" class="squiggly-link">Beachside Barracoder's coding club</a>, where we collaborate on various projects, and I'm a member of <a href="https://hackclub.com/" class="squiggly-link">Hack Club International.</a> I&#39;m excited to continue my coding journey and explore new possibilities!<br><br>What I'm Currently Working on:<br>Organizing <a href="https://counterspell.hackclub.com" class="squiggly-link">Counterspell Saint Augustine</a>!</p></div>
+            <p>Hi, I&#39;m Josh! I know HTML, CSS, and JavaScript, and I'm currently learning Swift, Python, and Godot. I enjoy creating websites and developing short games. 
+              <br><br> One of my achievements is developing a <a href="https://teamtripwire.glitch.me" class="squiggly-link">local offender tracker called Tripwire</a>, 
+              which won a school competition. I also run the <a href="https://barracoders.com/" class="squiggly-link">Beachside Barracoder's coding club</a>, where we 
+              collaborate on various projects, and I'm a member of <a href="https://hackclub.com/" class="squiggly-link">Hack Club International.</a> I&#39;m excited to 
+              continue my coding journey and explore new possibilities!<br><br>What I'm Currently Working on:<br>Organizing <a href="https://counterspell.hackclub.com" 
+              class="squiggly-link">Counterspell Saint Augustine</a>!</p></div>
             <br>
             <br>
             
@@ -61,8 +66,8 @@
     </footer>
     <br>
     <script>
-        const username = 'JoshIsYes'; // Replace with your Last.fm username
-        const apiKey = '152dd7341991a250c5e0b7092879abd9';    // Replace with your Last.fm API key
+        const username = 'JoshIsYes'; 
+        const apiKey = '152dd7341991a250c5e0b7092879abd9';    
         const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1`;
       
         async function fetchNowPlaying() {
@@ -70,14 +75,14 @@
       const response = await fetch(apiUrl);
       const data = await response.json();
 
-      // Check if there's a recent track and if it's currently playing
+      
       const track = data.recenttracks.track[0];
       const nowPlayingDiv = document.getElementById('nowPlaying');
       
       if (track && track['@attr'] && track['@attr'].nowplaying) {
         const artist = track.artist['#text'];
         const songTitle = track.name;
-        const albumCover = track.image[2]['#text'] || ''; // Medium size image
+        const albumCover = track.image[2]['#text'] || ''; 
 
         nowPlayingDiv.innerHTML = `
           <img src="${albumCover}" alt="Album cover">
@@ -95,7 +100,6 @@
     }
   }
 
-  // Fetch now playing data every 30 seconds
   fetchNowPlaying();
   setInterval(fetchNowPlaying, 30000);
       </script>
@@ -105,14 +109,13 @@
     
             links.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault();  // Prevent immediate navigation
-                    document.body.classList.remove('fade-in'); // Remove fade-in class
-                    document.body.style.opacity = 0; // Start fade-out effect
+                    e.preventDefault(); 
+                    document.body.classList.remove('fade-in');
+                    document.body.style.opacity = 0; 
     
-                    // After delay, navigate to the new page
                     setTimeout(() => {
                         window.location.href = this.href;
-                    }, 300); // Adjust delay to match CSS transition
+                    }, 300);
                 });
             });
         });
