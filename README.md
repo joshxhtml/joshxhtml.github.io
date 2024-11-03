@@ -23,7 +23,7 @@ Hello! I'm a developer passionate about creating innovative projects and solving
 Here are some of the key technologies I work with:
 
 - **Languages**: HTML, CSS, JavaScript, Python, Swift
-- **Frameworks & Libraries**: React, Node.js, Godot
+- **Frameworks & Libraries**: React, Node.js, Godot 
 - **Tools**: Git, GitHub, Glitch, Unity, Unreal Engine
 
 ---
