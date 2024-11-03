@@ -74,7 +74,7 @@ h1 {
 .description p {
   font-size: 1.2em;
   color: #f0f0f0;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 10px #523d6d;
 }
 
 /* Links and Buttons */
@@ -162,7 +162,7 @@ h1 {
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px #38284b;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
