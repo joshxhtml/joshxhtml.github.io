@@ -402,12 +402,12 @@ body.fade-in {
   }
 }
 
-/* Page Transition Effect for Link Clicks */
+
 .more-item {
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
 .more-item:active {
   opacity: 0.8;
-  transform: scale(0.98); /* Slight shrink effect on click */
+  transform: scale(0.98); 
 }

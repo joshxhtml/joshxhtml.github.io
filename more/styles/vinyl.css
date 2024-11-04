@@ -473,6 +473,8 @@ h1 {
 @media (max-width: 600px) {
     .vinyl-grid {
         grid-template-columns: repeat(2, 1fr);
+        
     }
+
 }
 

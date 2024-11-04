@@ -1,6 +1,6 @@
 # My Portfolio
 
-Welcome to my portfolio! Here, you'll find a showcase of my work, projects, and my journey as a developer. This repository contains my portfolio website, which highlights my skills, projects, and professional growth.
+Hello I'm Josh, welcome to my portfolio! Here, you'll find a showcase of my work, projects, and my journey as a developer. This repository contains my portfolio website, which highlights my skills, projects, and professional growth.
 
 ## Table of Contents
 
