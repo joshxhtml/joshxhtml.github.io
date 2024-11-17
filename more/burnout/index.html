@@ -97,6 +97,35 @@
         </div>
     </div>
 </section>
+<div class="slanted-divider"></div>
+<section id="retro-section">
+    <h1 class="retro-title">✨ Welcome to My 90s-Inspired Section! ✨</h1>
+    
+    <marquee behavior="alternate" direction="left" scrollamount="10">
+      <i>★ The coolest website on the internet ★</i>
+    </marquee>
+    
+    <p class="retro-text"><b>This site is best viewed with Netscape Navigator!</b></p>
+  
+    <table class="retro-table" border="1" cellspacing="0" cellpadding="10">
+      <tr><th colspan="2">🌟 Website Stats 🌟</th></tr>
+      <tr><td>Visitors:</td><td>1024</td></tr>
+      <tr><td>Last Updated:</td><td>17th November 2024</td></tr>
+    </table>
+  
+    <div class="retro-badges">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Under_construction.gif" alt="Under Construction">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Best_viewed_with_netscape.png" alt="Best Viewed with Netscape">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Internet_Explorer_4_badge.png" alt="Best Viewed with IE4">
+    </div>
+  
+    <p class="retro-text"><b>Check back often for updates!</b></p>
+    <blink class="retro-blink">🌐 This text is blinking! 🌐</blink>
+  </section>
+  
+  <div class="slanted-divider"></div>
+  <p style="text-align: center;">this is the end for now! </p>
+  <div class="slanted-divider"></div>
 
 <canvas id="ballPitCanvas"></canvas>
 
@@ -190,8 +219,166 @@
             });
         })();
         </script>
-    
+    <script>
+        document.addEventListener('mousemove', function(e) {
+          const star = document.createElement('div');
+          star.className = 'star';
+          star.style.left = `${e.pageX}px`;
+          star.style.top = `${e.pageY}px`;
+          document.body.appendChild(star);
+          setTimeout(() => star.remove(), 500);
+        });
+        
+        const style = document.createElement('style');
+        style.textContent = `
+          .star {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 10px yellow;
+            pointer-events: none;
+            z-index: 9999;
+          }
+        `;
+        document.head.appendChild(style);
+        </script>
+        <script>
+            let canvas, ctx;
+            let playerPaddle, computerPaddle, ball;
+            let upPressed = false, downPressed = false;
+            let gameInterval;
+            
+            // Paddle and Ball objects
+            class Paddle {
+              constructor(x, y, width, height) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.speed = 5;
+              }
+            
+              draw() {
+                ctx.fillStyle = "#00ff00";
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+              }
+              
+              move(up) {
+                if (up) this.y = Math.max(0, this.y - this.speed);
+                else this.y = Math.min(canvas.height - this.height, this.y + this.speed);
+              }
+            }
+            
+            class Ball {
+              constructor(x, y, radius) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.speedX = 4;
+                this.speedY = 4;
+              }
+            
+              draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = "#ffcc00";
+                ctx.fill();
+                ctx.closePath();
+              }
+            
+              reset() {
+                this.x = canvas.width / 2;
+                this.y = canvas.height / 2;
+                this.speedX *= -1;
+              }
+            
+              move() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+            
+                // Ball collision with top and bottom walls
+                if (this.y <= 0 || this.y >= canvas.height) this.speedY *= -1;
+              }
+            }
+            
+            // Initialize game objects
+            function initGame() {
+              canvas = document.getElementById("pongCanvas");
+              ctx = canvas.getContext("2d");
+              
+              playerPaddle = new Paddle(10, canvas.height / 2 - 30, 10, 60);
+              computerPaddle = new Paddle(canvas.width - 20, canvas.height / 2 - 30, 10, 60);
+              ball = new Ball(canvas.width / 2, canvas.height / 2, 8);
+              
+              document.addEventListener("keydown", keyDownHandler);
+              document.addEventListener("keyup", keyUpHandler);
+            }
+            
+            // Handle key presses
+            function keyDownHandler(e) {
+              if (e.key === "ArrowUp") upPressed = true;
+              if (e.key === "ArrowDown") downPressed = true;
+            }
+            
+            function keyUpHandler(e) {
+              if (e.key === "ArrowUp") upPressed = false;
+              if (e.key === "ArrowDown") downPressed = false;
+            }
+            
+            // Update game state
+            function update() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              
+              // Move player paddle
+              if (upPressed) playerPaddle.move(true);
+              if (downPressed) playerPaddle.move(false);
+              
+              // Move computer paddle (simple AI)
+              if (computerPaddle.y + computerPaddle.height / 2 < ball.y) computerPaddle.move(false);
+              else computerPaddle.move(true);
+            
+              // Move ball
+              ball.move();
+            
+              // Ball collision with paddles
+              if (
+                ball.x - ball.radius < playerPaddle.x + playerPaddle.width &&
+                ball.y > playerPaddle.y &&
+                ball.y < playerPaddle.y + playerPaddle.height
+              ) {
+                ball.speedX *= -1;
+              }
+              if (
+                ball.x + ball.radius > computerPaddle.x &&
+                ball.y > computerPaddle.y &&
+                ball.y < computerPaddle.y + computerPaddle.height
+              ) {
+                ball.speedX *= -1;
+              }
+            
+              // Ball out of bounds
+              if (ball.x < 0 || ball.x > canvas.width) {
+                ball.reset();
+              }
+            
+              // Draw paddles and ball
+              playerPaddle.draw();
+              computerPaddle.draw();
+              ball.draw();
+            }
+            
+            // Start the game when section is clicked
+            function startPongGame() {
+              if (gameInterval) clearInterval(gameInterval);
+              initGame();
+              gameInterval = setInterval(update, 1000 / 60); // 60 FPS
+            }
+            </script>
+            
         
         
 </body>
 </html>
+

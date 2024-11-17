@@ -209,5 +209,3 @@ function isMobile() {
 }
 
 bootSequence();
-
-      

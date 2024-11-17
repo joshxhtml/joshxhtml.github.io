@@ -416,3 +416,110 @@ pre {
 #terminal-section {
     display: none;
 }
+
+/* Retro Section Styling */
+#retro-section {
+    background-color: #000;
+    background: url('https://art.teleportacia.org/observation/vernacular/stars/starry.gif') repeat;
+    color: #00ff00;
+    font-family: "Comic Sans MS", "Courier New", sans-serif;
+    text-align: center;
+    padding: 50px;
+    margin: 40px auto;
+    border: 5px solid #ff00ff;
+    box-shadow: 0 0 20px #00ffff;
+  }
+  
+  .retro-title {
+    font-size: 48px;
+    color: #ff00ff;
+    text-shadow: 2px 2px 8px #0000ff;
+    margin-bottom: 20px;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes neon-glow {
+    from {
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ff00, 0 0 30px #ff00ff, 0 0 40px #00ff00;
+    }
+    to {
+      text-shadow: 0 0 20px #00ffff, 0 0 30px #ff0000, 0 0 40px #00ff00, 0 0 50px #0000ff;
+    }
+  }
+  
+  .retro-text {
+    font-size: 24px;
+    color: #ffff00;
+    background-color: #000000;
+    padding: 10px;
+    margin: 20px auto;
+    display: inline-block;
+  }
+  
+  .retro-table {
+    margin: 30px auto;
+    width: 70%;
+    border: 2px solid #00ff00;
+    background-color: #000;
+  }
+  
+  .retro-table th {
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 20px;
+  }
+  
+  .retro-table td {
+    background-color: #ff00ff;
+    color: #00ffff;
+  }
+  
+  .marquee {
+    font-size: 20px;
+    color: #ff4500;
+    margin: 30px 0;
+  }
+  
+  .retro-badges img {
+    margin: 10px;
+    width: 120px;
+    height: auto;
+    border: 2px solid #00ff00;
+  }
+  
+  .retro-blink {
+    animation: blink 1s step-end infinite;
+    font-size: 24px;
+    color: #00ff00;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  #pong-section {
+    background-color: #000;
+    padding: 20px;
+    border: 4px solid #ff00ff;
+    text-align: center;
+    margin: 50px auto;
+    width: 620px;
+    cursor: pointer;
+    color: #00ff00;
+  }
+  
+  #pongCanvas {
+    background-color: #111;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #00ff00;
+  }
+  
+  .pong-instructions {
+    font-family: "Courier New", monospace;
+    color: #ffcc00;
+    margin-top: 10px;
+  }
+  
