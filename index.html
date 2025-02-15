@@ -86,7 +86,7 @@
         if (track && track['@attr'] && track['@attr'].nowplaying) {
             const artist = track.artist['#text'];
             const songTitle = track.name;
-            nowPlayingDiv.innerHTML = `<pim currently playing <a href="${trackUrl}" target="_blank">"${songTitle}" by ${artist}</a></p>`;
+            nowPlayingDiv.innerHTML = `<p>im currently playing <a href="${trackUrl}" target="_blank">"${songTitle}" by ${artist}</a></p>`;
         } else {
             nowPlayingDiv.innerHTML = `<p>im not currently listening to anything right now, but you can <a href="https://open.spotify.com/playlist/5Xg7VGKGjjXBwwzoZDtR4d?si=nc6n3xmGRnWZkWLsT2WihQ">check out my playlist</a></p>`;
         }
