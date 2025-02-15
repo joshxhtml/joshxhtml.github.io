@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Josh's Site</title>
+    <title>josh's portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       rel="icon"
@@ -62,14 +62,14 @@
 <body>
     <h1>Hi :)</h1>
     <p>this is just a placeholder for my portfolio, i felt like the one i had up didnt reflect me anymore</p>
-    <p>i should be working on my new one and it should be up soon, you can still access the old on <a href="/old/index.html">here</a> if you want to, images and links are broken tho cause i didnt update the html when moving it into a folder</p>
+    <p>i am currently working on a new one but progress is slow as i dont really know what i want to do</p>
     <p>if you are still interested in my projects you can check them out on <a href="https://github.com/i-suck-at-most-stuff">my github</a></p>
     <div class="now-playing" id="nowPlaying">
-        <p><i class="fab fa-spotify"></i> Loading now playing...</p>
+        <p>loading josh's spotify activity</p>
     </div>
     <p>- josh \(^w^)/</p>   
 </body>
-<!--stole this from my orginal portfolio but made it condensed down into one <p> line-->
+
 <script>
     const username = 'JoshIsYes'; 
     const apiKey = '152dd7341991a250c5e0b7092879abd9';    
@@ -86,7 +86,7 @@
         if (track && track['@attr'] && track['@attr'].nowplaying) {
             const artist = track.artist['#text'];
             const songTitle = track.name;
-            nowPlayingDiv.innerHTML = `<p>also, right now im currently playing <a href="${trackUrl}" target="_blank">"${songTitle}" by ${artist}</a></p>`;
+            nowPlayingDiv.innerHTML = `<pim currently playing <a href="${trackUrl}" target="_blank">"${songTitle}" by ${artist}</a></p>`;
         } else {
             nowPlayingDiv.innerHTML = `<p>im not currently listening to anything right now, but you can <a href="https://open.spotify.com/playlist/5Xg7VGKGjjXBwwzoZDtR4d?si=nc6n3xmGRnWZkWLsT2WihQ">check out my playlist</a></p>`;
         }
