@@ -180,6 +180,11 @@
           const originalContent = row.innerHTML;
           row.innerHTML = `<div class="scrolling-wrapper">${originalContent}${originalContent}</div>`;
         });
+
+        if (window.innerWidth <= 600) {
+          albumGrid.innerHTML += albumGrid.innerHTML;
+          albumGrid.innerHTML += albumGrid.innerHTML;
+        }
       } catch (error) {
         console.error('Error fetching recent tracks:', error);
       }
