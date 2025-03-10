@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       rel="icon"
-      href="/turtle-logo.jpeg"
+      href="/tutle-logo-explode-ver.png"
       type="image/icon type"
     />
     <!--simplest css ive ever written-->
@@ -62,40 +62,19 @@
 <body>
     <h1>Hi :)</h1>
     <p>this is just a placeholder for my portfolio, i felt like the one i had up didnt reflect me anymore</p>
-    <p>i am currently working on a new one but progress is slow as i dont really know what i want to do</p>
-    <p>if you are still interested in my projects you can check them out on <a href="https://github.com/i-suck-at-most-stuff">my github</a></p>
-    <div class="now-playing" id="nowPlaying">
-        <p>loading josh's spotify activity</p>
-    </div>
+    <p>i am working on a new one, progress is slow as im still trying to figure out what i want to do</p>
+    <p>---</p>
+    <p>im getting back into coding as i took a break due to burnout</p>
+    <p>during my break i found myself having aspirations to do something bigger with my coding skills, not just work on small web projects that no ones gonna view</p>
+    <p>so coming back im trying to work on bigger stuff (ignore my first project) and sharpen my skills and make something im proud of and want to share with the world</p>
+    <p>with that being said heres all my projects since my return, right now its just small things i wanted to code before i try something big again:</p>
+    <ul>
+        <li><a href="/listening-history.html">Stalk Josh's Listening History</a> - Added 3/9/25</li>
+    </ul>
+    <p>if you are interested in my older projects you can check them out on <a href="https://github.com/i-suck-at-most-stuff">my github</a></p>
+
     <p>- josh \(^w^)/</p>   
 </body>
 
-<script>
-    const username = 'JoshIsYes'; 
-    const apiKey = '152dd7341991a250c5e0b7092879abd9';    
-    const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1`;
-  
-    async function fetchNowPlaying() {
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();     
-        const track = data.recenttracks.track[0];
-        const nowPlayingDiv = document.getElementById('nowPlaying');
-        const trackUrl = track.url;
 
-        if (track && track['@attr'] && track['@attr'].nowplaying) {
-            const artist = track.artist['#text'];
-            const songTitle = track.name;
-            nowPlayingDiv.innerHTML = `<p>im currently playing <a href="${trackUrl}" target="_blank">"${songTitle}" by ${artist}</a></p>`;
-        } else {
-            nowPlayingDiv.innerHTML = `<p>im not currently listening to anything right now, but you can <a href="https://open.spotify.com/playlist/5Xg7VGKGjjXBwwzoZDtR4d?si=nc6n3xmGRnWZkWLsT2WihQ">check out my playlist</a></p>`;
-        }
-    } catch (error) {
-        console.error('Error fetching now playing data:', error);
-        nowPlayingDiv.innerHTML = `<p>unable to load now playing data, unless its an internet issue, you should tell josh he messed up his code</p>`;
-    }
-}
-fetchNowPlaying();
-setInterval(fetchNowPlaying, 30000);
-  </script>
 </html>
