@@ -220,78 +220,7 @@
         .find-me-links a:hover {
             color: #7b9ebd;
         }
-        @media (max-width: 950px) {
-            .home-container { width: 100vw; min-width: 0; }
-        }
-        @media (max-width: 700px) {
-            .home-container {
-                width: 100vw;
-                min-width: 0;
-                margin: 0;
-                border: none;
-                box-shadow: none;
-            }
-            .home-profile {
-                flex-direction: column;
-                padding: 10px;
-                gap: 0;
-            }
-            .profile-left {
-                width: 100%;
-                margin-right: 0;
-                align-items: center;
-            }
-            .profile-pic {
-                width: 60vw;
-                height: 60vw;
-                max-width: 98vw;
-                max-height: 60vw;
-            }
-            .profile-info {
-                font-size: 1em;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .friends-section {
-                width: 100%;
-                padding: 8px 0;
-            }
-            .friends-list {
-                gap: 10px;
-            }
-            .friend-pic {
-                width: 50px;
-                height: 50px;
-            }
-            .projects-grid {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .project-card {
-                min-width: 0;
-                max-width: 100vw;
-                padding: 10px 8px 8px 8px;
-            }
-            .photos-grid {
-                gap: 8px;
-                justify-content: center;
-            }
-            .photos-grid img {
-                width: 70px;
-                height: 70px;
-            }
-            .profile-section h2 {
-                font-size: 1.1em;
-            }
-            .profile-blurb {
-                font-size: 0.98em;
-                padding: 8px;
-            }
-            .comments-section {
-                font-size: 0.98em;
-                padding: 6px;
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -313,7 +242,7 @@
                 <div class="friends-section">
                     <b>josh's current rotation</b>
                     <div class="friends-list">
-                        <!--album covers should generate here-->
+                        
                     </div>
                 </div>
             </div>
@@ -327,7 +256,7 @@
                     <h2>About Me</h2>
                     <p>im josh, i like coding, music, and researching really niche topics that no one knows nor cares about -  normally in relation to the first 2 points<br>
                     i'm pretty fluent in html/css and basic javascript for web dev and i'd say im decent at python, at least enough to teach it to others. i'm starting to learn java but i want to expand into the world of c and dotnet.<br>
-                    on a different page for my music taste i'll listen to pretty much anything but i'm more geared toward the punk and emo scenes and everything adj to that. i really like new 5th wave (generally called midwest emo) bands, or if a band has played warped tour in the past theres a good chance i've heard of them.<br>
+                    switching to my music taste - i'll listen to pretty much anything but i'm more geared toward the punk and emo scenes and everything adj to that. i really like new 5th wave (generally called midwest emo) bands, or if a band has played warped tour in the past theres a good chance i've heard of them.<br>
                     i also have a neurological disorder called visual snow syndrome, which is a condition that causes visual disturbances like seeing static, afterimages, and light sensitivity.<br>
                     in addition to coding and music, i also enjoy hiking and being outdoors, especially backpacking. and i also collect physical media like vinyl and cd cause i like owning my media.<br>
                     thats pretty much about me, if you want to know more about me you can check out the rest of my page, or you can find me on my social media linked below.<br>
@@ -380,6 +309,7 @@
                         <li>Goo Goo Dolls w/ O.A.R @ Saint Augustine Amp 7/27/2023 - <a href="https://www.setlist.fm/setlist/goo-goo-dolls/2023/st-augustine-amphitheatre-st-augustine-fl-63a4fa2b.html">Setlist</a></li>
                         <li>Green Day w/ Rancid and the Linda Linda's @ PNC Music Pavilion 8/26/2024 - <a href="https://www.setlist.fm/setlist/green-day/2024/pnc-music-pavilion-charlotte-nc-5babb784.html">Setlist</a></li>
                         <li>O.A.R @ Saint Augustine Amp 11/17/2024 - <a href="https://www.setlist.fm/setlist/oar/2024/st-augustine-amphitheatre-st-augustine-fl-1b51d530.html">Setlist</a></li>
+                        <li>Taylor Acorn, Arrows in Action, If Not For Me, Rain City Drive, Beauty School Dropout, Charolette Sands, and Huddy @ House of Blues, Houston 7/31/2025 - <a href="https://www.setlist.fm/search?country=us&venue=7bd6220c&year=2025&query=summer+school">Setlists</a></li>
                     </ul>
                 </div>
         
@@ -474,6 +404,4 @@ async function updateTopFriendsWithAlbumsAndStatus() {
 updateTopFriendsWithAlbumsAndStatus();
 setInterval(updateTopFriendsWithAlbumsAndStatus, 60000);
 </script>
-
-
 </html>
