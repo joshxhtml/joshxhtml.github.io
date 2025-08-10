@@ -310,6 +310,14 @@
                     <b>Location:</b> somewhere<br>
                     <b>Status:</b> <span id="profile-status">not listening to music, so probably sleeping</span><br>
                 </div>
+                <div class="profile-audio" style="width:232px; background: #f3f3f3; border: 1px solid #7b9ebd; padding:8px; margin:8px 0; text-align:center;">
+                    <b>song of the year:</b><br>
+                    <audio id="random-audio" controls style="width:90%;">
+                        <source id="audio-source" src="" type="audio/mpeg">
+                        music no work :(
+                    </audio>
+                    <div id="audio-title" style="margin-top:6px; font-size:12px; color:#003366;"></div>
+                </div>
                 <div class="friends-section">
                     <b>josh's current rotation</b>
                     <div class="friends-list">
@@ -356,6 +364,17 @@
                             <div class="project-desc">a broswer extension that simulates the effects of a neurological disorder that i suffer from</div>
                         </div>
 
+                        <div class="project-card" style="padding:14px 18px 10px 18px; display:flex; flex-direction:column; align-items:center;">
+                            <div class="project-title"><a href="https://i-suck-at-most-stuff.itch.io/idkhgw-bitmb-k" target="_blank">IDKHGW (BITMB(K))</a></div>
+                            <iframe frameborder="0" src="https://itch.io/embed/3791276?border_width=0&amp;link_color=193d3f&amp;border_color=193d3f" width="220" height="170" style="max-width:100%;"></iframe>
+                            
+                        </div> 
+                        
+                        <div class="project-card">
+                            <div class="project-title"><a href="https://tripwire.barracoders.com" target="_blank">Tripwire</a></div><br>
+                            <div class="project-desc">tripwire was made for an innovation competition in 2023 by me and friends. tripwire ended up winning the school side of the competition and compeated at districts, where it lost but we were proud of our work. the site has been archived with all its orginal code (in its unfinished and jaded state) and is no longer being updated. the code is available on github and moved here for archival purposes. </div>
+                        </div>
+                        
                     </div>
                     <p style="margin-top:10px;">If you are interested in my older projects that aren't worthy in my eyes to be here you can check them out on <a href="https://github.com/i-suck-at-most-stuff">my github</a></p>
                 </div>
@@ -474,5 +493,35 @@ async function updateTopFriendsWithAlbumsAndStatus() {
 }
 updateTopFriendsWithAlbumsAndStatus();
 setInterval(updateTopFriendsWithAlbumsAndStatus, 60000);
+
+// audio bar logic
+async function setRandomAudio() {
+    try {
+        const res = await fetch('/songs/directory.json');
+        const songs = await res.json();
+        console.log("Loaded songs:", songs);
+        if (Array.isArray(songs) && songs.length > 0) {
+            const randomSong = songs[Math.floor(Math.random() * songs.length)];
+            console.log("Selected song:", randomSong);
+            const audio = document.getElementById('random-audio');
+            audio.src = `/songs/${randomSong.file}`;
+            audio.load();
+            // Set song title
+            document.getElementById('audio-title').textContent = randomSong.name || randomSong.file;
+        } else {
+            const audio = document.getElementById('random-audio');
+            audio.removeAttribute('src');
+            audio.innerHTML = "No songs found!";
+            document.getElementById('audio-title').textContent = "";
+        }
+    } catch (e) {
+        console.error('Failed to load random song:', e);
+        const audio = document.getElementById('random-audio');
+        audio.removeAttribute('src');
+        audio.innerHTML = "Error loading songs!";
+        document.getElementById('audio-title').textContent = "";
+    }
+}
+document.addEventListener('DOMContentLoaded', setRandomAudio);
 </script>
 </html>
