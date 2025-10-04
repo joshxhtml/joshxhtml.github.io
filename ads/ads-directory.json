@@ -1,0 +1,78 @@
+[
+  {
+    "name": "ad #1",
+    "image": "/ads/04_M0R6HDOK.gif"
+  },
+  {
+    "name": "ad #2",
+    "image": "/ads/06_Ditial_ad.gif"
+  },
+  {
+    "name": "ad #3",
+    "image": "/ads/07_alphachip.gif"
+  },
+  {
+    "name": "ad #4",
+    "image": "/ads/08_netgrocer.gif"
+  },
+  {
+    "name": "ad #5",
+    "image": "/ads/09_1998internetstudy.gif"
+  },
+  {
+    "name": "ad #6",
+    "image": "/ads/15_smartparent.gif"
+  },
+  {
+    "name": "ad #7",
+    "image": "/ads/17_dtrain.gif"
+  },
+  {
+    "name": "ad #8",
+    "image": "/ads/17_M0RQPVRA.gif"
+  },
+  {
+    "name": "ad #9",
+    "image": "/ads/20_miningco.gif"
+  },
+  {
+    "name": "ad #10",
+    "image": "/ads/21_coolsavings.gif"
+  },
+    {
+        "name": "ad #11",
+        "image": "ads/casino.gif"
+    },
+    {
+        "name": "ad #12",
+        "image": "ads/ebay.gif"
+    },
+    {
+        "name": "ad #13",
+        "image": "ads/games3.gif"
+    },
+    {
+        "name": "ad #14",
+        "image": "ads/manga.gif"
+    },
+    {
+        "name": "ad #15",
+        "image": "ads/netscape.gif"
+    },
+    {
+        "name": "ad #16",
+        "image": "ads/radiodisney.gif"
+    },
+    {
+        "name": "ad #17",
+        "image": "ads/spongebob.gif"
+    },
+    {
+        "name": "ad #18",
+        "image": "ads/toysrus.gif"
+    },
+    {
+        "name": "ad #19",
+        "image": "ads/xpmagazine.gif"
+    }
+]

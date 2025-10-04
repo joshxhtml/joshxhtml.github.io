@@ -100,7 +100,6 @@ body {
     width: 250px;
     height: 250px;
     background: #eee;
-    border-bottom: 1px solid #7b9ebd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +114,7 @@ body {
 .profile-info {
     font-size: 13px;
     background: #f3f3f3;
-    border-bottom: 1px solid #7b9ebd;
+    border: 1px solid #7b9ebd;
     padding: 10px;
 }
 .profile-main {
@@ -288,6 +287,60 @@ a:hover {
     object-fit: contain;
     display: block;
 }
+#banner-ad-findme {
+    width: 100%;
+    min-height: 80px;
+    text-align: center;
+    margin: 18px 0 8px 0;
+    padding: 8px 0;
+    background: none;
+    border: none;
+}
+#banner-ad-findme img {
+    display: inline;
+    width: 100%;
+    height: auto;
+    border: 1px solid #7b9ebd;
+    vertical-align: middle;
+    
+    
+}
+#banner-ad-concerts {
+    width: 100%;
+    min-height: 80px;
+    text-align: center;
+    margin: 18px 0 8px 0;
+    padding: 8px 0;
+    background: none;
+}
+#banner-ad-concerts img {
+    display: inline;
+    width: 100%;
+    height: auto;
+    
+    vertical-align: middle;
+    border: 1px solid #7b9ebd;
+    
+}
+#banner-ad-hackathons {
+    width: 100%;
+    min-height: 80px;
+    text-align: center;
+    margin: 18px 0 8px 0;
+    padding: 8px 0;
+    background: none;
+    border: none;
+}
+#banner-ad-hackathons img {
+    display: inline;
+    width: 100%;
+    height: auto;
+    
+    vertical-align: middle;
+    border: 1px solid #7b9ebd;
+    
+}
+
 @media (max-width: 950px) {
     .home-container { width: 100vw; min-width: 0; }
 }

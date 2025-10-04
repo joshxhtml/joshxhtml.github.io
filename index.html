@@ -86,6 +86,9 @@
                         <a href="https://www.instagram.com/josh.xhtml/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
                         <a href="https://i-suck-at-most-stuff.itch.io/" target="_blank" title="Airbuds"><i class="fas fa-link"></i> Itch.io</a>
                     </div>
+                    <div id="banner-ad-findme" >
+                        <img src="/photos/profile/me-drawn-at-daydream-by-eugene-the-goat.png" alt="default ad" style="max-width:100%;height:auto;">
+                    </div>
                 </div>
                 <div class="profile-section">
                     <h2>josh's Projects</h2>
@@ -130,6 +133,9 @@
                         </div>
 
                     </div>
+                    <div id="banner-ad-hackathons" >
+                        <img src="/photos/profile/me-drawn-at-daydream-by-eugene-the-goat.png" alt="default ad" style="max-width:100%;height:auto;">
+                    </div>
                     </div>
                 <div class="profile-section">
                     <h2>Photos</h2>
@@ -163,8 +169,12 @@
                         <li>The Offspring w/ Jimmy Eat World & New Found Glory @  Cynthia Woods Mitchell Pavilion, The Woodlands 8/23/2025 - <a href="https://www.setlist.fm/setlist/the-offspring/2025/cynthia-woods-mitchell-pavilion-the-woodlands-tx-3b5b0048.html">Setlist</a></li>
                         <li>My Chemical Romance w/ Evanescence @ Raymond James Stadium, Tampa 9/13/2025 - <a href="https://www.setlist.fm/setlist/my-chemical-romance/2025/raymond-james-stadium-tampa-fl-2b5e8852.html">Setlist</a></li>
                     </ul>
+                    
                 </div>
-        
+                    <div id="banner-ad-concerts"  >
+                        <img src="/photos/profile/me-drawn-at-daydream-by-eugene-the-goat.png" alt="default ad" style="max-width:100%;height:auto;">
+                    </div>
+                    
                 <div class="comments-section">
                     <b>Comments</b>
                     <div class="comment">
@@ -284,5 +294,62 @@ async function setRandomAudio() {
     }
 }
 document.addEventListener('DOMContentLoaded', setRandomAudio);
+
+function imgErrorHandler(e) {
+    e.target.onerror = null;
+    e.target.src = '/photos/profile/me-drawn-at-daydream-by-eugene-the-goat.png';
+}
+
+async function displayRandomBannerAds() {
+    try {
+        const res = await fetch('/ads/ads-directory.json');
+        const ads = await res.json();
+        if (Array.isArray(ads) && ads.length > 0) {
+            const picked = [];
+            const used = new Set();
+            while (picked.length < 3 && used.size < ads.length) {
+                const idx = Math.floor(Math.random() * ads.length);
+                if (!used.has(idx)) {
+                    picked.push(ads[idx]);
+                    used.add(idx);
+                }
+            }
+            const spots = [
+                { id: 'banner-ad-findme', ad: picked[0] },
+                { id: 'banner-ad-hackathons', ad: picked[1] },
+                { id: 'banner-ad-concerts', ad: picked[2] }
+            ];
+            spots.forEach(spot => {
+                const el = document.getElementById(spot.id);
+                if (el && spot.ad) {
+                    // Remove all children
+                    while (el.firstChild) el.removeChild(el.firstChild);
+                    // Create image node
+                    const img = document.createElement('img');
+                    img.src = spot.ad.image;
+                    img.alt = spot.ad.name;
+                    img.style.maxWidth = '100%';
+                    img.style.height = 'auto';
+                    img.onerror = imgErrorHandler;
+                    el.appendChild(img);
+                } else if (el) {
+                    el.textContent = "No ads available";
+                }
+            });
+        } else {
+            ['banner-ad-findme', 'banner-ad-hackathons', 'banner-ad-concerts'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = "No ads available";
+            });
+        }
+    } catch (e) {
+        ['banner-ad-findme', 'banner-ad-hackathons', 'banner-ad-concerts'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = "Error loading ads";
+        });
+        console.error('Failed to load banner ads:', e);
+    }
+}
+document.addEventListener('DOMContentLoaded', displayRandomBannerAds);
 </script>
 </html>
