@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       rel="icon"
-      href="/tutle-logo-explode-ver.png"
+      href="/photos/profile/tutle-logo-explode-ver.png"
       type="image/icon type"
     />
     <link rel="stylesheet" href="style.css">
@@ -13,19 +13,38 @@
 <body>
     <div class="home-container">
         <div class="home-header">
-            josh's home page 
+            <div class="header-content">
+                <form class="myspace-search" onsubmit="event.preventDefault(); window.location.href='https://www.cameronsworld.net/';">
+                    <input type="text" placeholder="search josh's space..." name="search" />
+                    <button type="submit">search</button>
+                </form>
+                <div class="header-presented">
+                    <span style="font-size:11px; margin-right:4px;">presented by</span>
+                    <span style="font-size:22px; font-weight:bold;">Josh</span>
+                </div>
+            </div>
+        </div>
+        <div class="sub-header-bar">
+            <a href="https://github.com/joshxhtml" target="_blank">GitHub</a> |
+            <a href="https://www.instagram.com/josh.xhtml/" target="_blank">Instagram</a> |
+            <a href="https://i.airbuds.fm/josh.is.vibin/i8LqaIyXMG" target="_blank">Airbuds</a> |
+            <a href="https://barracoders.com/" target="_blank">Barracoders</a> |
+            <a href="https://counterspell.hackclub.com/saint-augustine" target="_blank">Counterspell</a> |
+            <a href="https://daydream.hackclub.com/st-aug" target="_blank">Daydream</a>
         </div>
         <div class="home-profile">
             <div class="profile-left">
                 <div class="profile-pic">
-                    <img src="/tutle-logo-explode-ver.png" alt="josh profile photo">
+                    <img src="/photos/profile/me-drawn-at-daydream-by-eugene-the-goat.png" alt="josh profile photo">
                 </div>
                 <div class="profile-info">
                     <b>Display Name:</b> josh<br>
                     <b>Username:</b> joshxhtml<br>
                     <b>Location:</b> somewhere<br>
                     <b>Status:</b> <span id="profile-status">not listening to music, so probably sleeping</span><br>
+                    
                 </div>
+                
                 <div class="profile-audio" style="width:232px; background: #f3f3f3; border: 1px solid #7b9ebd; padding:8px; margin:8px 0; text-align:center;">
                     <b>song of the year:</b><br>
                     <audio id="random-audio" controls style="width:90%;">
@@ -48,7 +67,7 @@
                     
                 </div>
                 <div class="profile-section">
-                    <h2>About Me</h2>
+                    <h2>about me</h2>
                     <p>im josh, i like coding, music, and researching really niche topics that no one knows nor cares about -  normally in relation to the first 2 points<br>
                     i'm pretty fluent in html/css and basic javascript for web dev and i'd say im decent at Godot, at least enough to teach it to others. i'm starting to learn java but i want to expand into the world of c and dotnet.<br>
                     switching to my music taste - i'll listen to pretty much anything but i'm more geared toward the punk and emo scenes and everything adj to that. i really like new 5th wave (generally called midwest emo) bands, or if a band has played warped tour in the past theres a good chance i've heard of them.<br>
@@ -59,7 +78,7 @@
                 </p>
                 </div>
                 <div class="profile-section">
-                    <h2>Find Me</h2>
+                    <h2>find me</h2>
                     <div class="find-me-links">
                         <a href="https://github.com/joshxhtml" target="_blank" title="GitHub"><i class="fab fa-github"></i> Github</a>
                         <a href="https://www.instagram.com/josh.xhtml/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>

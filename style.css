@@ -2,16 +2,16 @@ body {
     font-family: Tahoma, Verdana, Arial, sans-serif;
     font-size: 12px;
     color: #222;
-    background: #c7d0cc;
+    background: #dfdfdf;
     margin: 0;
     padding: 0;
 }
 .home-container {
     width: 900px;
-    margin: 30px auto;
+    margin: 0 auto;
     background: #fff;
-    border: 2px solid #7b9ebd;
-    box-shadow: 0 0 10px #888;
+    border: none;
+    box-shadow: none;
     padding: 0;
 }
 .home-header {
@@ -21,7 +21,69 @@ body {
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 2px;
-    border-bottom: 3px solid #7b9ebd;
+    border-bottom: none;
+    position: relative;
+}
+.sub-header-bar {
+    background: #5284c1;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #3a5e8c;
+    justify-content: center;
+    text-align: center;
+}
+.sub-header-bar a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: normal;
+    margin: 0 4px;
+    transition: color 0.2s;
+}
+.sub-header-bar a:hover {
+    color: #dbeafe;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+.myspace-search {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 0;
+}
+.myspace-search input[type="text"] {
+    padding: 2px 6px;
+    font-size: 13px;
+    border: 1px solid #7b9ebd;
+    border-radius: 2px;
+    background: #e5eefa;
+    color: #003366;
+}
+.myspace-search button {
+    padding: 2px 10px;
+    font-size: 13px;
+    background: #7b9ebd;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.myspace-search button:hover {
+    background: #003366;
+}
+.header-presented {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-left: auto;
+    text-align: right;
 }
 .home-profile {
     display: flex;
@@ -70,10 +132,14 @@ body {
 }
 .profile-section h2 {
     font-size: 16px;
-    color: #003366;
-    margin: 0 0 6px 0;
-    border-bottom: 1px solid #7b9ebd;
-    padding-bottom: 2px;
+    color: #FF6600;
+    padding-left: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    background: #ffcc99;
+    border-bottom: none;
+    box-sizing: border-box;
 }
 .friends-section {
     background: #f3f3f3;
@@ -177,7 +243,7 @@ a:hover {
     color: #fff;
     text-align: center;
     padding: 8px 0 4px 0;
-    border-top: 3px solid #7b9ebd;
+    border-top: none;
 }
 .badges-bar {
     display: flex;
@@ -208,6 +274,20 @@ a:hover {
 .find-me-links a:hover {
     color: #7b9ebd;
 }
+.profile-actions {
+    margin: 10px 0 14px 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+.profile-actions img {
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    object-fit: contain;
+    display: block;
+}
 @media (max-width: 950px) {
     .home-container { width: 100vw; min-width: 0; }
 }
@@ -218,6 +298,30 @@ a:hover {
         margin: 0;
         border: none;
         box-shadow: none;
+        background: #fff;
+    }
+    .home-header {
+        padding: 10px;
+    }
+    .sub-header-bar {
+        padding: 6px 8px;
+        font-size: 1em;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .header-presented {
+        margin-left: 0;
+        text-align: left;
+    }
+    .myspace-search {
+        margin-right: 0;
     }
     .home-profile {
         flex-direction: column;
@@ -270,6 +374,11 @@ a:hover {
     }
     .profile-section h2 {
         font-size: 1.1em;
+        margin: 12px -8px 6px -8px;
+        padding: 6px 8px;
+        background: #fcc77b;
+        color: #f65113;
+        border-bottom: none;
     }
     .profile-blurb {
         font-size: 0.98em;
